@@ -3,19 +3,31 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --dark-primary: #333; /* Define dark-primary color */
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+.dark-primary {
+  color: var(--dark-primary); /* Apply dark-primary color */
+}
+
+/* Mobile-specific styles for small devices */
+@media (max-width: 390px) {
+  body {
+    font-size: small;
+    padding: 15px;
+     /* Adjust padding for small screens */
+  }
+  .dark-primary {
+    font-size: 16px; /* Adjust font size for dark-primary text */
   }
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+/* Styles for larger screens (desktops or tablets) */
+@media (min-width: 1440px) {
+  body {
+    padding: 30px; /* Increased padding for larger screens */
+  }
+  .dark-primary {
+    font-size: 18px; /* Larger font size for better visibility on large screens */
+  }
 }
