@@ -3,6 +3,7 @@
 import React from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation'; // Use next/navigation
+import Image from 'next/image'; // Import Image component from Next.js
 
 const Header = () => {
   const router = useRouter();
@@ -19,12 +20,10 @@ const Header = () => {
         <ul className="flex items-center justify-between w-full px-2 py-1">
           {/* Search Button */}
           <li className="flex items-center">
-            <Link href="/search" legacyBehavior>
-              <a>
-                <button className="bg-transparent border-0 p-2 hover:bg-gray-200 rounded-full focus:outline-none">
-                  <img src="./1.png" alt="Search" className="w-5 h-5" />
-                </button>
-              </a>
+            <Link href="/search">
+              <button className="bg-transparent border-0 p-2 hover:bg-gray-200 rounded-full focus:outline-none">
+                <Image src="/1.png" alt="Search" width={20} height={20} />
+              </button>
             </Link>
           </li>
 
@@ -42,21 +41,17 @@ const Header = () => {
           {/* Cart and User Buttons Grouped Together */}
           <li className="flex items-center space-x-4">
             {/* Cart Button */}
-            <Link href="/cart" legacyBehavior>
-              <a>
-                <button className="bg-transparent border-0 p-2 hover:bg-gray-200 rounded-full focus:outline-none">
-                  <img src="./cart.jpeg" alt="Cart" className="w-5 h-5" />
-                </button>
-              </a>
+            <Link href="/cart">
+              <button className="bg-transparent border-0 p-2 hover:bg-gray-200 rounded-full focus:outline-none">
+                <Image src="/cart.jpeg" alt="Cart" width={20} height={20} />
+              </button>
             </Link>
 
             {/* User Button */}
-            <Link href="/user-profile" legacyBehavior>
-              <a>
-                <button className="bg-transparent border-0 p-2 hover:bg-gray-200 rounded-full focus:outline-none">
-                  <img src="./user.jpeg" alt="User Profile" className="w-5 h-5" />
-                </button>
-              </a>
+            <Link href="/user-profile">
+              <button className="bg-transparent border-0 p-2 hover:bg-gray-200 rounded-full focus:outline-none">
+                <Image src="/user.jpeg" alt="User Profile" width={20} height={20} />
+              </button>
             </Link>
           </li>
         </ul>
@@ -67,37 +62,37 @@ const Header = () => {
 
       {/* Navigation Links with updated size and font */}
       <div className="absolute top-[90px] left-[382px] w-[675px] h-[22px] flex gap-[44px] text-lg text-DarkPrimary">
-        <Link href="/plant-pots" legacyBehavior>
+        <Link href="/plant-pots">
           <a className="w-[90px] h-[22px] text-[16px] leading-[21.6px] font-[Satoshi] font-normal">
             Plant Pots
           </a>
         </Link>
-        <Link href="/ceramics" legacyBehavior>
+        <Link href="/ceramics">
           <a className="w-[70px] h-[22px] text-[16px] leading-[21.6px] font-[Satoshi] font-normal">
             Ceramics
           </a>
         </Link>
-        <Link href="/tables" legacyBehavior>
+        <Link href="/tables">
           <a className="w-[70px] h-[22px] text-[16px] leading-[21.6px] font-[Satoshi] font-normal">
             Tables
           </a>
         </Link>
-        <Link href="/chairs" legacyBehavior>
+        <Link href="/chairs">
           <a className="w-[70px] h-[22px] text-[16px] leading-[21.6px] font-[Satoshi] font-normal">
             Chairs
           </a>
         </Link>
-        <Link href="/crockery" legacyBehavior>
+        <Link href="/crockery">
           <a className="w-[70px] h-[22px] text-[16px] leading-[21.6px] font-[Satoshi] font-normal">
             Crockery
           </a>
         </Link>
-        <Link href="/tableware" legacyBehavior>
+        <Link href="/tableware">
           <a className="w-[70px] h-[22px] text-[16px] leading-[21.6px] font-[Satoshi] font-normal">
             Tableware
           </a>
         </Link>
-        <Link href="/cutlery" legacyBehavior>
+        <Link href="/cutlery">
           <a className="w-[70px] h-[22px] text-[16px] leading-[21.6px] font-[Satoshi] font-normal">
             Cutlery
           </a>
