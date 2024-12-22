@@ -2,15 +2,15 @@
 
 import React from 'react';
 import Link from 'next/link';
-import { useRouter } from 'next/navigation'; // Use next/navigation
-import Image from 'next/image'; // Import Image component from Next.js
+import { useRouter } from 'next/navigation';
+import Image from 'next/image';
 
 const Header = () => {
   const router = useRouter();
 
   const handleHomeClick = (e: React.MouseEvent) => {
-    e.preventDefault(); // Prevent default link behavior
-    router.push('/'); // Navigate to the home page
+    e.preventDefault();
+    router.push('/');
   };
 
   return (
@@ -21,31 +21,45 @@ const Header = () => {
           {/* Search Button */}
           <li className="flex items-center">
             <Link href="/search">
-              <Image src="/1.png" alt="Search" width={20} height={20} className="bg-transparent border-0 p-2 hover:bg-gray-200 rounded-full focus:outline-none" />
+              <Image
+                src="/1.png"
+                alt="Search"
+                width={20}
+                height={20}
+                className="bg-transparent border-0 p-2 hover:bg-gray-200 rounded-full focus:outline-none"
+              />
             </Link>
           </li>
 
           {/* Title (Avion as Home Button) */}
           <li className="font-clash-display text-2xl font-normal leading-[29.52px] text-DarkPrimary">
-            <a
-              href="/"
-              onClick={handleHomeClick}
-              className="hover:underline cursor-pointer"
-            >
-              Avion
-            </a>
+            <Link href="/">
+              <span className="hover:underline cursor-pointer">Avion</span>
+            </Link>
           </li>
 
           {/* Cart and User Buttons Grouped Together */}
           <li className="flex items-center space-x-4">
             {/* Cart Button */}
             <Link href="/cart">
-              <Image src="/cart.jpeg" alt="Cart" width={20} height={20} className="bg-transparent border-0 p-2 hover:bg-gray-200 rounded-full focus:outline-none" />
+              <Image
+                src="/cart.jpeg"
+                alt="Cart"
+                width={20}
+                height={20}
+                className="bg-transparent border-0 p-2 hover:bg-gray-200 rounded-full focus:outline-none"
+              />
             </Link>
 
             {/* User Button */}
             <Link href="/user-profile">
-              <Image src="/user.jpeg" alt="User Profile" width={20} height={20} className="bg-transparent border-0 p-2 hover:bg-gray-200 rounded-full focus:outline-none" />
+              <Image
+                src="/user.jpeg"
+                alt="User Profile"
+                width={20}
+                height={20}
+                className="bg-transparent border-0 p-2 hover:bg-gray-200 rounded-full focus:outline-none"
+              />
             </Link>
           </li>
         </ul>

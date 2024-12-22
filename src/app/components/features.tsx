@@ -25,7 +25,7 @@ const Features = () => {
           <a href="/unbeatable-prices" className="flex flex-col items-center text-center bg-gray-100 p-6 rounded-lg hover:bg-gray-200 transition-colors duration-200"> 
             <Image src="/buy.jpg" alt="Unbeatable Prices" width={48} height={48} className="mb-4" />
             <h3 className="text-lg font-medium mb-2">Unbeatable prices</h3>
-            <p className="text-sm text-gray-600">For our materials and quality you won't find better prices anywhere</p>
+            <p className="text-sm text-gray-600">For our materials and quality you will not find better prices anywhere</p>
           </a>
 
           {/* Feature 4 */}
