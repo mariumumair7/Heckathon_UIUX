@@ -19,12 +19,12 @@ const Cart = () => {
       name: 'Basic White Vase',
       image: '/lamp.jpeg',
       price: 125,
-      fontSize: 16, 
+      fontSize: 16,
       quantity: 1,
     },
   ]);
 
-  const handleQuantityChange = (id, newQuantity) => {
+  const handleQuantityChange = (id: number, newQuantity: number) => { // Change id to number
     if (newQuantity <= 0) return;
     setCartItems((prevItems) =>
       prevItems.map((item) =>
@@ -63,7 +63,7 @@ const Cart = () => {
                   type="number"
                   value={item.quantity}
                   min="1"
-                  onChange={(e) => handleQuantityChange(item.id, Number(e.target.value))}
+                  onChange={(e) => handleQuantityChange(item.id, Number(e.target.value))} // id is number
                   className="w-16 text-center border p-2"
                 />
               </td>

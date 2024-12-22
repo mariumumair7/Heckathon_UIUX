@@ -9,6 +9,7 @@ const Footer = () => {
     <footer className="bg-gray-800 text-white p-4">
       <div className="container mx-auto">
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
+          {/* Menu Section */}
           <div>
             <h5 className="text-lg font-semibold mb-4">Menu</h5>
             <ul className="list-none">
@@ -54,6 +55,8 @@ const Footer = () => {
               </li>
             </ul>
           </div>
+
+          {/* Categories Section */}
           <div>
             <h5 className="text-lg font-semibold mb-4">Categories</h5>
             <ul className="list-none">
@@ -99,6 +102,8 @@ const Footer = () => {
               </li>
             </ul>
           </div>
+
+          {/* Our Company Section */}
           <div>
             <h5 className="text-lg font-semibold mb-4">Our Company</h5>
             <ul className="list-none">
@@ -144,12 +149,15 @@ const Footer = () => {
               </li>
             </ul>
           </div>
+
+          {/* Mailing List Section */}
           <div>
             <h5 className="text-lg font-medium mb-4">Join our mailing list</h5>
             <form
-              onSubmit={(e) => {
+              onSubmit={(e: React.FormEvent<HTMLFormElement>) => {
                 e.preventDefault();
-                const emailInput = e.target.elements.email.value;
+                const form = e.target as HTMLFormElement;
+                const emailInput = (form.elements.namedItem('email') as HTMLInputElement).value;
                 alert(`Email submitted: ${emailInput}`);
               }}
             >
@@ -163,7 +171,7 @@ const Footer = () => {
                 />
                 <button
                   type="submit"
-                  className="bg-white text-[#2A254B] font-[Satoshi] font-small px-4 py-2 rounded-md border border-gray-300 hover:bg-gray-100 transition-all"
+                  className="bg-white text-[#2A254B] font-[Satoshi] px-4 py-2 rounded-md border border-gray-300 hover:bg-gray-100 transition-all"
                 >
                   Sign up
                 </button>
@@ -171,20 +179,23 @@ const Footer = () => {
             </form>
           </div>
         </div>
+
         <hr className="my-6 border-gray-700" />
+
+        {/* Footer Bottom Section */}
         <div className="flex justify-between items-center mt-6">
           <p className="text-left">Copyright © 2023 Avion LTD</p>
           <div className="flex space-x-4">
-            <a href="#" className="text-gray-300 hover:text-gray-100">
+            <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-gray-100">
               <FaFacebook size={20} />
             </a>
-            <a href="#" className="text-gray-300 hover:text-gray-100">
+            <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-gray-100">
               <FaInstagram size={20} />
             </a>
-            <a href="#" className="text-gray-300 hover:text-gray-100">
+            <a href="https://www.twitter.com" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-gray-100">
               <FaTwitter size={20} />
             </a>
-            <a href="#" className="text-gray-300 hover:text-gray-100">
+            <a href="https://www.pinterest.com" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-gray-100">
               <FaPinterest size={20} />
             </a>
           </div>
