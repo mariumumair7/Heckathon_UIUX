@@ -21,9 +21,7 @@ const Header = () => {
           {/* Search Button */}
           <li className="flex items-center">
             <Link href="/search">
-              <button className="bg-transparent border-0 p-2 hover:bg-gray-200 rounded-full focus:outline-none">
-                <Image src="/1.png" alt="Search" width={20} height={20} />
-              </button>
+              <Image src="/1.png" alt="Search" width={20} height={20} className="bg-transparent border-0 p-2 hover:bg-gray-200 rounded-full focus:outline-none" />
             </Link>
           </li>
 
@@ -42,16 +40,12 @@ const Header = () => {
           <li className="flex items-center space-x-4">
             {/* Cart Button */}
             <Link href="/cart">
-              <button className="bg-transparent border-0 p-2 hover:bg-gray-200 rounded-full focus:outline-none">
-                <Image src="/cart.jpeg" alt="Cart" width={20} height={20} />
-              </button>
+              <Image src="/cart.jpeg" alt="Cart" width={20} height={20} className="bg-transparent border-0 p-2 hover:bg-gray-200 rounded-full focus:outline-none" />
             </Link>
 
             {/* User Button */}
             <Link href="/user-profile">
-              <button className="bg-transparent border-0 p-2 hover:bg-gray-200 rounded-full focus:outline-none">
-                <Image src="/user.jpeg" alt="User Profile" width={20} height={20} />
-              </button>
+              <Image src="/user.jpeg" alt="User Profile" width={20} height={20} className="bg-transparent border-0 p-2 hover:bg-gray-200 rounded-full focus:outline-none" />
             </Link>
           </li>
         </ul>
@@ -63,39 +57,39 @@ const Header = () => {
       {/* Navigation Links with updated size and font */}
       <div className="absolute top-[90px] left-[382px] w-[675px] h-[22px] flex gap-[44px] text-lg text-DarkPrimary">
         <Link href="/plant-pots">
-          <a className="w-[90px] h-[22px] text-[16px] leading-[21.6px] font-[Satoshi] font-normal">
+          <span className="w-[90px] h-[22px] text-[16px] leading-[21.6px] font-[Satoshi] font-normal">
             Plant Pots
-          </a>
+          </span>
         </Link>
         <Link href="/ceramics">
-          <a className="w-[70px] h-[22px] text-[16px] leading-[21.6px] font-[Satoshi] font-normal">
+          <span className="w-[70px] h-[22px] text-[16px] leading-[21.6px] font-[Satoshi] font-normal">
             Ceramics
-          </a>
+          </span>
         </Link>
         <Link href="/tables">
-          <a className="w-[70px] h-[22px] text-[16px] leading-[21.6px] font-[Satoshi] font-normal">
+          <span className="w-[70px] h-[22px] text-[16px] leading-[21.6px] font-[Satoshi] font-normal">
             Tables
-          </a>
+          </span>
         </Link>
         <Link href="/chairs">
-          <a className="w-[70px] h-[22px] text-[16px] leading-[21.6px] font-[Satoshi] font-normal">
+          <span className="w-[70px] h-[22px] text-[16px] leading-[21.6px] font-[Satoshi] font-normal">
             Chairs
-          </a>
+          </span>
         </Link>
         <Link href="/crockery">
-          <a className="w-[70px] h-[22px] text-[16px] leading-[21.6px] font-[Satoshi] font-normal">
+          <span className="w-[70px] h-[22px] text-[16px] leading-[21.6px] font-[Satoshi] font-normal">
             Crockery
-          </a>
+          </span>
         </Link>
         <Link href="/tableware">
-          <a className="w-[70px] h-[22px] text-[16px] leading-[21.6px] font-[Satoshi] font-normal">
+          <span className="w-[70px] h-[22px] text-[16px] leading-[21.6px] font-[Satoshi] font-normal">
             Tableware
-          </a>
+          </span>
         </Link>
         <Link href="/cutlery">
-          <a className="w-[70px] h-[22px] text-[16px] leading-[21.6px] font-[Satoshi] font-normal">
+          <span className="w-[70px] h-[22px] text-[16px] leading-[21.6px] font-[Satoshi] font-normal">
             Cutlery
-          </a>
+          </span>
         </Link>
       </div>
     </div>
